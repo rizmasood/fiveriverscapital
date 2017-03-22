@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>5Rivers Healthcare REIT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #ADD8E6;
+      color: #000000;
+      padding: 100px 50px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+        }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+     
+    </div>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#businessplan">INVESTOR INFORMATION</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>5RIVERS HEALTHCARE REIT</h1> 
+  <p>Invest with us,receive steady monthly income, secure your future.</p> 
+    <p>Join us if you want to have steady montly income.</p> 
+
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="10" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Sign up for updates</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About 5Rivers Capital</h2><br>
+      <p>5Rivers Healthcare REIT is intended to be a publicly registered, exchange-traded real estate investment trust (REIT) that seeks to <span style="white-space: nowrap;">capitalize on</span></br>the <strong>GROWTH</strong> of undeniable demographic trends, <br />the <strong>STRENGTH</strong> of the healthcare industry and <br />the <strong>EXPERTISE</strong> of a REIT management team dedicated exclusively to healthcare real estate.</p>
+<p>5Rivers Healthcare REIT is sponsored by 5Rivers Capital whose principals have combined experience of 50 years in real estate development, management and healthcare operations.</p>
+
+  </div>
+  
+
+  <div>
+  <h3> What is Real Estate Investment Trust</h3>
+<p>REIT is an alternative asset class which adds depth to the capital market and provide flexibity to investors.It provides transparency and make the fund REIT Management accountable through a trust mechanism engrained in the REIT Regulations.REIT is regulated by the SECP and require REIT Management Company (the "RMC") to be liscenced by the SECP as a Non-Banking Finance Company ("NBFC") in accordance with Part VIII-A of the Companies Ordinance, 1984 (the "Ordinance") and the REIT Regulations, 2015. RMC is to be incorporated under the Ordinance read with the provisions of the NBFC Rules, 2003.</p>
+
+</div>
+      
+      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    
+    <div class="col-sm-4">
+ 
+      <span class="glyphicon glyphicon-signal logo"></span>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4><strong>MISSION:</strong> We aim to provide access, to all size of investors, to a portfolio of high quality healthcare real estate assets.The REIT's portfolio will ensure that quality of real estate us chosen with long term indexed leases and stable occupancies.The REIT will ensure that it develop a highly professional organization and leverage the expertise to acquire depressed and inefficient healthcare providers and turn them into revenue generating platforms.</P>
+
+      </h4>
+
+
+ 
+      <h4><p><strong>VISION:</strong> Our vision is to grow organically  and by acquisition and provide real estate solutions tailored to the healthcare industry on a global scale.</p></h4>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>WHAT WE STAND FOR </h2>
+  <h4>We offer the highest level of committment to your hard earned money and will work day and night to get you steady flow of income as dividends</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>POWER OF KNOWLEDGE AND TRUST WITH US</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>LOVE TO SERVE ALL STAKEHOLDERS AND STOCKHOLDERS</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>GETTHE JOB DONE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>ENVIRONMENTAL FRIENDLY OPERATIONS</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>DEDICATED AND PROFESSIONAL TEAM</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">HARD WORK IS OUR TRADEMARK</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Container (BUSINESS PLAN SECTION) -->
+
+<div id="businessplan" class="container-fluid text-center">
+  <h2>INVESTOR INFORMATION</h2>
+
+
+  <h4>Acquisition Strategy</h4>
+    <div >
+
+      <p>5Rivers healthcare REIT propose to invest in a diversified portfolio of real estate assets that may generate rental income or operation revenue.Our portfolio will include assets that will allow us to generate high quality income streams for investors. Our underlying assets may include medical office buildings, hospitals, skilled nursing facilities, senior housing facilities and other healthcare-related assets.</p>
+<p>Besides acquiring properties, the REIT may also originate or acquire real estate-related investments which could include mortgage, mezzanine, bridge and other loans, common and preferred stock of, or other interests in, public or private unaffiliated real estate companies, commercial mortgage backed securities, and certain other securities such as collaterized debt obligations and foreign securities. The REIT will seek to purchase healthcare assets located on and off medical campuses where demographic trends indicate potential growth in the market and the underlying value of the real estate. Properties with long-term leases in place and currently leased properties play an integral role in the final decision of whether to acquire a property. The REIT endeavors to maintain high occupancy rates across its portfolio and seeks properties where future capital needs are reasonable, allowing us to meet our investment objectives. 5Rivers Healtcare REIT&nbsp;seeks to diversify its portfolio by property type, location, tenants and lease expiration. Properties may include:</p>
+<ul>
+<li>Medical office buildings</li>
+
+<li>Senior housing facilities</li>
+<li>Assisted living and Skilled nursing facilities</li>
+<li>Hospitals and surgery centers</li>
+<li>Long-term acute care and memory care facilities</li>
+<li>Labs and research facilities</li>
+<li>Specialty medical and diagnostic service centers</li>
+<li>Pharmaceutical and medical supply manufacturing facilities</li>
+<li>Offices leased to tenants in healthcare-related industries</li>
+</ul>
+<p>Disclaimer: There is no guarantee that 5Rivers Healthcare REIT , Inc. will be able to achieve these investment objectives.</p>
+  </div>
+  <br>
+
+  
+      <h4>Healthcare Opportunities</h4>
+      <div >
+    <p><strong>A greater need for healthcare services is potentially leading to even greater demand for medical facilities.</strong><br /><br /></p>
+<h3 class="blue-bg" style="background: #005fb6; width: 500px; color: #ffffff; font-size: 12px; font-weight: 300; text-transform: uppercase; padding: 3px 10px;">Population Growth in Pakistan</h3>
+<div class="indent" style="padding-left: 35px;">
+<p>Pakistan is part of South Asia with India on the east, Iran on the west and Afghanistan on its west and northwest. Pakistan also shares a small segment of its border with ChinaAs a nation, the population is growing larger and older at an unprecedented rate. There are 7 cities in Pakistan with populaiton over than 1 million ad average annual growth rate of 3.5%.</br>
+
+
+<iframe src="http://data.worldbank.org/share/widget?end=2014&indicators=SH.XPD.PUBL.ZS&locations=PK&start=1995&view=chart" width='450' height='300' frameBorder='0' scrolling="no" ></iframe></br>
+
+
+
+ This growth is anticipated to create greater demand for healthcare services and the facilities that house them. By 2050, Pakistan will be home to 15 million more people than in 2010. The population over 65 years of age is expected to grow significantly between 2010 and 2060, from 40 million to more than 92 million people, a 125 percent increase.<sup>1,2</sup></p>
+
+<iframe src="http://data.worldbank.org/share/widget?end=2014&indicators=SH.XPD.PUBL.ZS&locations=PK&start=2014&view=map" width='450' height='300' frameBorder='0' scrolling="no" ></iframe>
+
+
+</div>
+
+
+
+</br>
+<h3 class="blue-bg" style="background: #005fb6; width: 500px; color: #ffffff; font-size: 12px; font-weight: 300; text-transform: uppercase; padding: 3px 10px;">Physicians Visits and Population over 65</h3>
+
+<div class="indent" style="padding-left: 35px;">
+
+<p>As the population ages, older people are likely to manage more chronic medical conditions. This should result in the need for more medical services and greater demand for healthcare facilities.Population ages 65 and above (% of total) in Pakistan. 
+Population ages 65 and above (% of total) in Pakistan was last estimated at 4.49 in 2015, according to the World Bank.The age structure of less is 15 years is close to 40%. This is very significant trend for future demand of health care services.</p></br>
+
+<<iframe src="http://data.worldbank.org/share/widget?end=2014&indicators=SH.XPD.OOPC.ZS&locations=PK&start=2000" width='450' height='300' frameBorder='0' scrolling="no" ></iframe></br></br>
+
+
+
+</div>
+
+<h3 class="blue-bg" style="background: #005fb6; width: 500px; color: #ffffff; font-size: 12px; font-weight: 300; text-transform: uppercase; padding: 3px 10px;">Rising Healthcare Spending</h3>
+
+<div class="indent" style="padding-left: 35px;">
+
+
+
+
+
+
+</br><p>Private healthcare expenditure is on rise due to the fact that the public healthcare infrastructure is crumbling under the funding and population pressures.The total public healthcare spending is  0.5 % of the GDP. This allows the private healthcare sector to come forth and address the market needs.</p>
+<p>Any healtcare service provider that operates efficiently have highest chances to be successful in this market.The 22, and on average, per capita spending on healthcare continues to increase.<sup>3</sup> This rise in spending is largely driven by those over 55 years of age, a group that is anticipated to expand almost 20 percent by 2013.<sup>4</sup> The aging of the country and growing life spans are leading to ever greater demand for healthcare services and healthcare-related real estate.</p>
+</div>
+
+<p>According to World Health Organization Global Health Expenditure database, 86.6 % fof health expenditure in Pakistan is out-of-pocket.</p></br>
+
+<iframe src="http://data.worldbank.org/share/widget?indicators=SH.XPD.OOPC.ZS&locations=PK" width='450' height='300' frameBorder='0' scrolling="no" ></iframe><br>
+
+</div>
+
+
+<h3 class="blue-bg" style="background: #005fb6; width: 500px; color: #ffffff; font-size: 12px; font-weight: 300; text-transform: uppercase; padding: 3px 10px;">Projected Job Growth</h3>
+
+<div class="indent" style="padding-left: 35px;">
+
+<p>As spending and demand for healthcare services increases, the sector continues to add jobs.Pakistan has a good wage cost structure for doctors and other health care prfessionals.According to one estimate tehre are 14 thousands doctors graduated mainly from medical schools in Pakistan. Nursing is another strong area where costs ar down due to ample supply of trained nurses.</p>
+
+
+
+</div>
+
+
+
+<h3 class="blue-bg" style="background: #005fb6; width: 500px; color: #ffffff; font-size: 12px; font-weight: 300; text-transform: uppercase; padding: 3px 10px;">Exponential Growth Potential</h3>
+
+<div class="indent" style="padding-left: 35px;">
+<p>The market landscape is very positive as there is only one REIT security trading publicly. Any REIT that allows retail investors to participate in the real estate and healthcare sector with one instrument have a lot of room for growth.Undeniably, institutional investors with deep pockets offers an opportunity to grow exponentially. The growth opportunities will remain to be tapped before this space becomes crowded by other offerors.
+</p>
+
+</div>
+
+
+
+<h3 class="blue-bg" style="background: #005fb6; width: 500px; color: #ffffff; font-size: 12px; font-weight: 300; text-transform: uppercase; padding: 3px 10px;">Necessity Based and Recession Resistant</h3>
+<div class="indent" style="padding-left: 35px;">
+
+<p>Due to the growth in populaiton the  healthcare-related real estate enjoys built-in demand drivers that do not exist in other real estate asset classes. Many view healthcare real estate as more stable and recession resistant than other commercial real estate sectors. Medical office buildings,dental office buildigs,medical labs and other related real estate had proven to show high occupancy even in worse economic conditions.</p>
+
+
+</div>
+
+<h3 class="blue-bg" style="background: #005fb6; width: 500px; color: #ffffff; font-size: 12px; font-weight: 300; text-transform: uppercase; padding: 3px 10px;">Increased Life Expectancy </h3>
+<div class="indent" style="padding-left: 35px;">
+
+<p> Improved health care services, advances in technology, lifestyle choices and nutritional awareness has helped to increase life expectancy to 66.7 years in Pakistan.Improved longevity is more likely to increase hospital visitaitons,medical procedures and per capita expenditure. Based on research by the Society of Actuaries, a 65-year-old female has more than a 40 percent probability of living to at least the age of 90, while there is a 1-in-3 chance that one member of a 65-year-old couple will live to at least age 95.<sup>8</sup></p>
+</div>
+
+<h3 class="blue-bg" style="background: #005fb6; width: 500px; color: #ffffff; font-size: 12px; font-weight: 300; text-transform: uppercase; padding: 3px 10px;">Health Care Insurance Plans </h3>
+<div class="indent" style="padding-left: 35px;">
+
+<p>Private health care insurance providers have been actively developing and promoting health insurance products.The enrolment numbers are showing a healthy trend.The insurance providers that are stepping forward to develop and market products are also increasing. According to on study the private healthcare sector serves 80% of populaiton and it is not vastly affordable. The insurance industry is providing a solution to this pain point by offering insurance products to a wide variety of in-patient hospitalization and other coverages.
+<sup>8</sup></p>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2><br>
+  <h4>Project pipeline</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="paris.jpg" alt="Paris" width="400" height="300">
+        <p><strong>Lahore XXX Hospital</strong></p>
+        <p>Yes, we are in Lahore</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="newyork.jpg" alt="Sargodha" width="400" height="300">
+        <p><strong>Sargodha</strong></p>
+        <p>We are in Sargodha</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
+        <p><strong>Multan YYY Hospital</strong></p>
+        <p>Yes, Multanis ours</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>Highlightsof Management's vision</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"we are pioneers in healtcare space and will grow organically to provide best returns."<br><span>Imran Nasir,CEO</span></h4>
+      </div>
+      <div class="item">
+        <h4>"This is the fiduciary duty to run other peoples money and we take it damn seriosuly!"<br><span>Malik Sabir,COO</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Healthcare is the future and we are positioned well for the future.<br><span>Rizwan Cheema,CIO</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> somewhere in Lahore/Sargodha</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 91 XXXXXXXXX</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@fiverivers.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+ 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
